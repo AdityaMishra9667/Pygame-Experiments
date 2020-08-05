@@ -2,10 +2,10 @@ import pygame, sys, math
 
 pygame.init()
 
-FPS = 60 # frames per second setting
+FPS = 60 # frames 
 fpsClock = pygame.time.Clock()
 
-# set up the window
+
 WIDTH = 700
 WIN = pygame.display.set_mode((WIDTH, WIDTH), 0, 32)
 pygame.display.set_caption('Cloth Physics')
@@ -38,7 +38,7 @@ class Particle:
             self.x = self.newx
             self.y = self.newy
 
-            # Collision Process
+            
             if self.x < 0 or self.x > WIDTH:
                 self.x, self.oldx = self.oldx, self.x
             if self.y < 0 or self.y > WIDTH:
@@ -98,7 +98,7 @@ def find_particle(pos):
 delta_t = 0.1
 mouse = False
 
-# create particles
+
 NUM_X = 15
 NUM_Y = 15
 particles = []
