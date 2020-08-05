@@ -2,7 +2,7 @@ import pygame, sys, math
 
 pygame.init()
 
-FPS = 60 # frames 
+FPS = 60  
 fpsClock = pygame.time.Clock()
 
 
@@ -30,7 +30,7 @@ class Particle:
 
     def update(self, delta_t):
         if self.fixed == False:
-            # Verlet Integration
+            #Verlet Integration
             self.newx = 2.0 * self.x - self.oldx + self.ax * delta_t * delta_t
             self.newy = 2.0 * self.y - self.oldy + self.ay * delta_t * delta_t
             self.oldx = self.x
